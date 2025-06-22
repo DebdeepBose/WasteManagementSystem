@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Contact</title>
+    <link rel="icon" href="eco.svg" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+    <link rel="stylesheet" href="contact.css" >
+  </head>
+  <body>
+    <header>
+      <img
+        class="logoimg"
+        src="eco.svg"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      />
+      <ul>
+        <li onclick="window.location.href='index.html'">Home</li>
+        <li onclick="window.location.href='manage.html'">Manage</li>
+        <li onclick="window.location.href='blogs.html'">Stories</li>
+        <li onclick="window.location.href='about.html'">About</li>
+        <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+          Contact
+        </li>
+      </ul>
+    </header>
+    <section class="contact-heading" data-aos="fade-down">
+      <h1>Let’s Contribute Together!</h1>
+      <p>
+        Proper waste management begins with one small action , reach out to help
+        or collaborate!
+      </p>
+    </section>
+    <main class="contact-container" data-aos="zoom-in">
+      <form id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Your Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="message">Your Message:</label>
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+        <button type="button" id="sendBtn">Send Message</button>
+      </form>
+      <div id="loading-message" style="display: none" class="status-message">
+        Sending...
+      </div>
+      <div
+        id="success-message"
+        style="display: none"
+        class="status-message success"
+      >
+        Message Sent Successfully!
+      </div>
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init("MmpACW8B5tGK8-jtX");
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: true });
+    </script>
+    <script src="contact.js"></script>
+  </body>
+</html>

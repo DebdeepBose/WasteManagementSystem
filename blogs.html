@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Waste Management Stories</title>
+    <link rel="icon" href="eco.svg" type="image/x-icon">
+    <link rel="stylesheet" href="blogs.css" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    >
+  </head>
+  <style>
+    #storyForm {
+      display: none;
+    }
+  </style>
+  <body>
+    <header>
+      <img
+        class="logoimg"
+        src="eco.svg"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      />
+      <ul>
+        <li onclick="window.location.href='index.html'">Home</li>
+        <li onclick="window.location.href='manage.html'">Manage</li>
+        <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Stories</li>
+        <li onclick="window.location.href='about.html'">About</li>
+        <li onclick="window.location.href='contact.html'">Contact</li>
+      </ul>
+    </header>
+    <section>
+      <div class="share-intro" data-aos="fade-right">
+        Every individual has a story to tell and a mark to leave behind. <br />
+        Share your journey of how you made a difference for the greens on this
+        blue dot. 🌍
+      </div>
+      <h2 class="section-title" data-aos="fade-left">Share Your Waste Management Story</h2>
+
+      <button id="shareBtn" >Share Your Story</button>
+
+      <div id="storyForm">
+        <textarea
+          id="storyInput"
+          placeholder="Write your story..."
+          rows="5"
+        ></textarea
+        ><br />
+        <button id="submitStory">Submit</button>
+      </div>
+
+      <div id="storyContainer"></div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: false });
+
+      const shareBtn = document.getElementById("shareBtn");
+      const storyForm = document.getElementById("storyForm");
+      const submitBtn = document.getElementById("submitStory");
+      const storyInput = document.getElementById("storyInput");
+      const storyContainer = document.getElementById("storyContainer");
+
+      let editingIndex = -1;
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const saved = JSON.parse(localStorage.getItem("stories") || "[]");
+
+        if (saved.length === 0) {
+          const exampleStories = [
+            "I started segregating my kitchen waste into compostable and non-compostable. In just 3 months, I reduced my garbage output by 40% and began composting for my rooftop garden.",
+            "At college, I initiated a plastic bottle collection drive. We collected over 3000 bottles in a month and collaborated with a local recycler. The campus looks cleaner, and it inspired more students to take action."
+          ];
+          localStorage.setItem("stories", JSON.stringify(exampleStories));
+          exampleStories
+            .slice()
+            .reverse()
+            .forEach((text, index) => addStory(text, index, false));
+        } else {
+          saved
+            .reverse()
+            .forEach((text, index) => addStory(text, index, false));
+        }
+      });
+
+      shareBtn.addEventListener("click", () => {
+        storyForm.style.display = "block";
+        storyInput.focus();
+      });
+
+      submitBtn.addEventListener("click", () => {
+        const text = storyInput.value.trim();
+        if (!text) return;
+
+        if (editingIndex === -1) {
+          saveToLocalStorage(text);
+          addStory(text);
+        } else {
+          updateStoryInDOM(text, editingIndex);
+          updateLocalStorage(text, editingIndex);
+          editingIndex = -1;
+        }
+
+        storyInput.value = "";
+        storyForm.style.display = "none";
+      });
+
+      function addStory(text, index = null, prepend = true) {
+        const card = document.createElement("div");
+        card.className = "story-card";
+        card.setAttribute("data-aos", "fade-up");
+
+        const storyText = document.createElement("div");
+        storyText.className = "story-text";
+        storyText.textContent = text;
+
+        const actions = document.createElement("div");
+        actions.className = "story-actions";
+
+        const editBtn = document.createElement("button");
+        editBtn.className = "edit-btn";
+        editBtn.textContent = "Edit";
+        editBtn.onclick = () => {
+          storyInput.value = text;
+          editingIndex = getIndexFromCard(card);
+          storyForm.style.display = "block";
+          storyInput.focus();
+        };
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.className = "delete-btn";
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = () => {
+          card.remove();
+          deleteFromLocalStorage(getIndexFromCard(card));
+        };
+
+        actions.appendChild(editBtn);
+        actions.appendChild(deleteBtn);
+        card.appendChild(storyText);
+        card.appendChild(actions);
+
+        if (prepend) storyContainer.prepend(card);
+        else storyContainer.appendChild(card);
+
+        AOS.refresh();
+      }
+
+      function getIndexFromCard(card) {
+        const allCards = Array.from(
+          document.querySelectorAll(".story-card")
+        ).reverse();
+        return allCards.indexOf(card);
+      }
+
+      function saveToLocalStorage(text) {
+        const stories = JSON.parse(localStorage.getItem("stories") || "[]");
+        stories.push(text);
+        localStorage.setItem("stories", JSON.stringify(stories));
+      }
+
+      function updateLocalStorage(newText, index) {
+        const stories = JSON.parse(localStorage.getItem("stories") || "[]");
+        stories[index] = newText;
+        localStorage.setItem("stories", JSON.stringify(stories));
+      }
+
+      function updateStoryInDOM(newText, index) {
+        const cards = Array.from(
+          document.querySelectorAll(".story-card")
+        ).reverse();
+        const card = cards[index];
+        if (card) {
+          card.querySelector(".story-text").textContent = newText;
+        }
+      }
+
+      function deleteFromLocalStorage(index) {
+        const stories = JSON.parse(localStorage.getItem("stories") || "[]");
+        stories.splice(index, 1);
+        localStorage.setItem("stories", JSON.stringify(stories));
+      }
+    </script>
+  </body>
+</html>

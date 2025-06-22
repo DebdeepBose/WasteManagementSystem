@@ -1,0 +1,156 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1fff4;
+  color: #116d12;
+}
+
+header {
+  background-color: #15b100;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 70px;
+}
+
+header img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+header ul li:hover,
+header img:hover {
+  transform: scale(1.1);
+}
+
+header ul li:active,
+header img:active {
+  transform: scale(0.95);
+}
+
+.contact-heading {
+  text-align: center;
+  padding: 60px 30px 30px;
+}
+
+.contact-heading h1 {
+  font-size: 34px;
+  color: #0c7c0c;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.contact-heading p {
+  font-size: 22px;
+  color: #087f0a;
+  font-weight: 400;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto 80px;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border: 2px solid #15b100;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(21, 177, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 18px;
+  color: #0e520e;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #b7e8c4;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f7fff9;
+  color: #0c3f0c;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #15b100;
+  box-shadow: 0 0 0 2px rgba(21, 177, 0, 0.2);
+}
+
+#sendBtn {
+  background-color: #15b100;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#sendBtn:hover {
+  background-color: #129700;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+   header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  header ul {
+    flex-direction: row;
+    gap: 10px;
+    font-size: 18px;
+  }
+  .contact-container {
+    margin: 30px 15px;
+    padding: 30px 20px;
+  }
+
+  .contact-heading h1 {
+    font-size: 28px;
+  }
+
+  .contact-heading p {
+    font-size: 16px;
+  }
+}
+
+*{
+  font-family: 'Fredoka', sans-serif;
+}

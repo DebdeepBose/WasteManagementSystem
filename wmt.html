@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Waste Management Tracker</title>
+
+
+    <link rel="stylesheet" href="wmt.css" >
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+  </head>
+  <body>
+    <header>
+      <h1 data-aos="fade-down">Waste Management Tracker</h1>
+      <p class="subheading" data-aos="fade-up">
+        Track your daily waste contributions and visualize your impact!
+      </p>
+    </header>
+
+    <section class="form-section">
+      <h2 data-aos="fade-up">Log Today's Waste</h2>
+      <form id="wasteForm" data-aos="zoom-in">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+
+        <label for="plastic">Plastic (g):</label>
+        <input type="number" id="plastic" />
+
+        <label for="plastic">Mixed Waste (g):</label>
+        <input type="number" id="mixed-waste" />
+
+        <label for="organic">Organic (g):</label>
+        <input type="number" id="organic"  />
+
+        <label for="organic">Inorganic (g):</label>
+        <input type="number" id="inorganic"  />
+
+        <label for="ewaste">E-Waste (items):</label>
+        <input type="number" id="ewaste"  />
+
+        <label for="paper">Solid Waste (g):</label>
+        <input type="number" id="solid-waste" />
+
+        <label for="paper">Liquid Waste (g):</label>
+        <input type="number" id="liquid-waste" />
+
+        <label for="other">Other (g):</label>
+        <input type="number" id="other" />
+
+        <button type="submit" id="logWasteBtn">Submit Entry</button>
+      </form>
+    </section>
+
+    <section class="chart-section">
+      <h2>Your Waste Chart</h2>
+      <canvas id="wasteChart"></canvas>
+    </section>
+
+    <section class="log-section">
+      <h2 data-aos="fade-up">Your Waste Logs</h2>
+      <div id="wasteLogs" class="log-list" data-aos="fade-up"></div>
+
+ 
+      <button id="clearLogsBtn" class="clear-btn" data-aos="fade-up">
+        🗑️ Clear All Logs
+      </button>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700, once: false });
+    </script>
+
+ 
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="wmt.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>About This Project</title>
+    <link rel="icon" href="eco.svg" type="image/x-icon">
+    <link rel="stylesheet" href="about.css" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+  <body>
+    <header>
+      <img
+        class="logoimg"
+        src="eco.svg"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      />
+      <ul>
+        <li onclick="window.location.href='index.html'">Home</li>
+        <li onclick="window.location.href='manage.html'">Manage</li>
+        <li onclick="window.location.href='blogs.html'">Stories</li>
+        <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">About</li>
+        <li onclick="window.location.href='contact.html'">Contact</li>
+      </ul>
+    </header>
+    <section class="why-project" data-aos="fade-up">
+      <div class="text-block">
+        <h2>Why This Project?</h2>
+        <p>
+          Every day, tons of waste goes unmanaged due to a lack of awareness.
+          Plastic clogs oceans, e-waste pollutes landfills, and recyclables end
+          up in the trash. This project was born out of the need to educate,
+          engage, and empower individuals to act more responsibly with
+          their waste. Through interactive features and tools, we aim to bridge
+          the gap between knowledge and action.
+        </p>
+      </div>
+      <div class="image-row">
+        <img src="unmw1p.jpeg" alt="Pollution Image 1" data-aos="fade-right" />
+        <img src="unmw2.jpeg" alt="Pollution Image 2" data-aos="fade-left" />
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <h2 data-aos="fade-up">How Our Tools Help</h2>
+      <div class="feature-grid">
+        <div class="feature" data-aos="fade-up">
+          <img src="wr.jpg" alt="Report Waste" />
+          <p>
+            <strong>Report Unmanaged Waste:</strong> Spot and report uncollected
+            garbage to raise awareness.
+          </p>
+        </div>
+
+        <div class="feature" data-aos="fade-up">
+          <img src="rcg.jpg" alt="Recycling Goals" />
+          <p>
+            <strong>Recycling Goal Manager:</strong> Plan your waste
+            actions—Recycle, Reuse, or Dispose.
+          </p>
+        </div>
+
+        <div class="feature" data-aos="fade-up">
+          <img src="cppw.jpeg" alt="Nearby Points" />
+          <p>
+            <strong>Nearby Collection Points:</strong> Quickly find the nearest
+            waste collection sites.
+          </p>
+        </div>
+
+        <div class="feature" data-aos="fade-up">
+          <img src="diy.jpg" alt="DIY Ideas" />
+          <p>
+            <strong>DIY Reuse & Recycle:</strong> Learn creative reuse and
+            recycling hacks by category.
+          </p>
+        </div>
+
+
+        <div class="feature" data-aos="fade-up">
+          <img src="wtrc.jpg" alt="Waste Tracker" />
+          <p>
+            <strong>Waste Tracker:</strong> Monitor your
+            impact over time.
+          </p>
+        </div>
+
+        <div class="feature" data-aos="fade-up">
+          <img src="qz.png" alt="Waste Quiz" />
+          <p>
+            <strong>Waste Sorting Quiz:</strong> Educate yourself while having
+            fun through quick quizzes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="vision-section" data-aos="zoom-in">
+      <div class="vision-text">
+        <h2>Vision Ahead</h2>
+        <p>
+          Our vision is to create a generation that is conscious of their waste
+          footprint. With better tools, widespread awareness, and local
+          participation, we aim to make sustainable waste practices the norm—
+          not the exception.
+        </p>
+      </div>
+      <div class="vision-image">
+        <img src="vis.jpg" alt="Vision Image" />
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: false });
+    </script>
+  </body>
+</html>

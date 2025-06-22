@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling Goal Manager</title>
+
+  <link rel="stylesheet" href="rgm.css" >
+  <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Recycling Goal Manager</h1>
+    <p class="subheading">Organize your recyclables smartly!</p>
+  </header>
+
+  <section class="entry-form-section" data-aos="zoom-in">
+    <h2>Add an Item</h2>
+    <form id="itemForm">
+      <input type="text" id="itemInput" placeholder="e.g., Plastic Bottle" required />
+      <button type="submit">Add Entry</button>
+    </form>
+  </section>
+
+  <section class="pending-section" data-aos="fade-up">
+    <h2>Pending Items</h2>
+    <div id="pendingList" class="entry-list"></div>
+  </section>
+
+  <section class="categorized-section" data-aos="fade-up">
+    <div class="category" data-aos="fade-right">
+      <h2>Recycle</h2>
+      <ul id="recycleList"></ul>
+    </div>
+    <div class="category" data-aos="fade-up">
+      <h2>Reuse</h2>
+      <ul id="reuseList"></ul>
+    </div>
+    <div class="category" data-aos="fade-left">
+      <h2>Dispose</h2>
+      <ul id="disposeList"></ul>
+    </div>
+  </section>
+
+  <div id="aiSuggestionBox" class="ai-box hidden">
+    <p id="aiMessage">Thinking...</p>
+    <div class="ai-buttons">
+      <button id="confirmBtn">Confirm Action</button>
+      <button id="cancelBtn">Change Action</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: false });
+  </script>
+
+  <script src="rgm.js"></script>
+</body>
+</html>

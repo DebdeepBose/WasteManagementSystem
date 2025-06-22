@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Report Unmanaged Waste</title>
+    <link rel="stylesheet" href="ruw.css" >
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+  <body>
+    <header>
+      <h1 data-aos="fade-down">Report Unmanaged Waste</h1>
+      <p class="subheading" data-aos="fade-up">
+        Help us keep our surroundings clean by reporting uncollected waste
+      </p>
+    </header>
+
+    <section class="form-section" data-aos="zoom-in">
+      <h2 data-aos="fade-right">Submit a Report</h2>
+      <form id="wasteReportForm" data-aos="fade-up">
+        <label for="location">Location Name/Description:</label>
+        <input type="text" id="location" required />
+
+        <label for="category">Waste Category:</label>
+        <select id="category" required>
+          <option value="">--Select--</option>
+          <option value="Plastic">Plastic</option>
+          <option value="Mixed">Mixed Waste</option>
+          <option value="Organic">Organic</option>
+          <option value="Inorganic">Inorganic</option>
+          <option value="Electronic">Electronic</option>
+          <option value="Solid">Solid Waste</option>
+          <option value="Liquid">Liquid Waste</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label for="photo" class="custom-file-label">Choose a Photo</label>
+        <input type="file" id="photo" accept="image/*" style="display: none" />
+        <span id="file-chosen">No file chosen</span>
+
+        <button type="submit" id="submitReport">Submit Report</button>
+      </form>
+    </section>
+
+    <section class="gallery-section" data-aos="fade-up">
+      <h2 data-aos="fade-left">Reported Waste Gallery</h2>
+      <div id="reportGallery" class="gallery-grid" data-aos="zoom-in-up"></div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: false });
+    </script>
+    <script src="ruw.js"></script>
+  </body>
+</html>

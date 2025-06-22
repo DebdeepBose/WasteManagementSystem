@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: #f2fef5;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0;
+  padding: 30px 20px;
+  background-color: #15b100;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+header h1 {
+ 
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 100px;
+  font-weight: 300;
+}
+
+header .subheading {
+  font-size: 24px;
+
+  font-weight: 300;
+}
+
+.quiz-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.quiz-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: inset -1px -1px 4px rgba(1, 132, 1, 0.664);
+  transition: transform 0.3s;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+}
+
+.quiz-card:hover {
+  transform: scale(1.01);
+}
+
+.quiz-card h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #2e7d32;
+  font-weight: 200;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.option-btn {
+  flex: 1 1 45%;
+  padding: 12px 18px;
+  font-size: 18px;
+  background-color: #e8f5e9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #2e7d32;
+  font-weight: 200;
+  min-width: 120px;
+   font-family: "Pacifico", cursive;
+}
+
+.option-btn:hover {
+  background-color: #c8e6c9;
+}
+
+.feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.correct {
+  background-color: #a5d6a7 !important;
+  color: #1b5e20;
+}
+
+.wrong {
+  background-color: #ffcdd2 !important;
+  color: #b71c1c;
+}
+
+.show-correct {
+  background-color: #bbdefb !important;
+  color: #0d47a1;
+}
+
+.correct {
+  background-color: #4caf50 !important; 
+  color: white;
+  font-weight: bold;
+}
+
+.wrong {
+  background-color: #f44336 !important; 
+  color: white;
+  font-weight: bold;
+}
+
+.actual-answer {
+  background-color: #2196f3 !important;
+  color: white;
+  font-weight: bold;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Pacifico", cursive;
+}
+
+*{
+  font-family: 'Fredoka', sans-serif;
+
+}

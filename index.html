@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+    <link rel="icon" href="eco.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    >
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="logoimg"
+        src="eco.svg"
+        alt="logo"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      />
+      <ul>
+        <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Home</li>
+        <li onclick="window.location.href='manage.html'">Manage</li>
+        <li onclick="window.location.href='blogs.html'">Stories</li>
+        <li onclick="window.location.href='about.html'">About</li>
+        <li onclick="window.location.href='contact.html'">Contact</li>
+      </ul>
+    </header>
+
+    <section class="leaf-box">
+      <div class="leaf" data-aos="fade-down-left"></div>
+      <div class="leaf-info">
+        <h1 data-aos="fade-left">Hello, World!<br /></h1>
+        <h2 data-aos="fade-right">Ahem... the real world this time</h2>
+        <p class="leaf-tagline" data-aos="fade-right">
+          We're not just here to say hello, we're here to clean up the mess the
+          real world left behind. Join us as we rethink waste, redefine
+          resources, and revive our planet <span class="earth">🌍</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="unmanaged-waste-info-box">
+      <div class="uwimg" data-aos="fade-right">
+        <img class="imgofuw" src="umw.jpeg" alt="uwimg" />
+      </div>
+      <div class="uwinfotext" data-aos="fade-left">
+        Every single day, <br />over 2 million tons of waste goes unmanaged
+        globally.<br />
+        From overflowing landfills to plastic-clogged oceans,<br />
+        our planet is gasping for help.<br />
+        Improper waste disposal leads to deadly health hazards, polluted
+        water<br />
+        sources, greenhouse gas emissions, and irreversible damage to
+        ecosystems.
+      </div>
+    </section>
+
+    <section class="story-box-section" id="storyBox">
+      <h1 data-aos="fade-up">Real Stories. Real Impact. 🌍</h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Every act of responsibility inspires another. See how people are making
+        a difference in waste management.
+      </p>
+
+      <div class="glide" data-aos="fade-up" data-aos-delay="100">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="medwast.webp" alt="cleanup 1" />
+            </li>
+            <li class="glide__slide">
+              <img src="bins.jpg" alt="using bins" />
+            </li>
+            <li class="glide__slide">
+              <img src="indorebroom.jpeg" alt="ib" />
+            </li>
+            <li class="glide__slide">
+              <img src="bins3.jpg" alt="lc" />
+            </li>
+            <li class="glide__slide">
+              <img src="bins2.jpg" alt="using bins" />
+            </li>
+            <li class="glide__slide">
+              <img src="multicl.webp" alt="mws" />
+            </li>
+            <li class="glide__slide">
+              <img src="vermicomposting.jpg" alt="vc" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="explore-text" data-aos="fade-up">
+        Inspired already? See more impactful stories from people like you.
+      </h2>
+      <button
+        class="explore-btn"
+        onclick="window.location.href='blogs.html'"
+        data-aos="fade-bottom"
+      >
+        Explore
+      </button>
+    </section>
+
+    <section class="waste-awareness-section">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="mgd.avif" alt="mgd" />
+          </div>
+          <div class="swiper-slide">
+            <img src="med.jpg" alt="med" />
+          </div>
+          <div class="swiper-slide">
+            <img src="dgg.jpg" alt="dgg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="pcrub.webp" alt="pcrub" />
+          </div>
+          <div class="swiper-slide">
+            <img src="claanin.jpg" alt="claanin" />
+          </div>
+          <div class="swiper-slide">
+            <img src="plant.jpg" alt="plant" />
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-text">
+        <h2 data-aos="fade-right">Every small action counts 🌱</h2>
+        <p data-aos="fade-left">
+          A little responsibility from each one of us can lead to massive
+          impact. Help the planet. Help yourself. Start managing your waste the
+          right way.
+        </p>
+        <button onclick="window.location.href='manage.html'">
+          Start Managing
+        </button>
+      </div>
+    </section>
+
+    <footer class="green-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h3>Contact <span>Info</span></h3>
+          <p><i class="fas fa-phone-alt"></i> +91 7439299792</p>
+          <p><i class="fas fa-envelope"></i> dbworkofficial@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Howrah, India - 711315</p>
+
+          <h3 class="follow-heading">Follow <span>Me</span></h3>
+          <div class="social-icons">
+            <a href="https://github.com/DebdeepBose" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/debdeep-bose-0a8a47303"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <h3><i class="fas fa-link"></i> Quick <span>Links</span></h3>
+          <ul>
+            <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+              <i class="fas fa-home"></i> Home
+            </li>
+            <li onclick="window.location.href='manage.html'"><i class="fas fa-user"></i> Manage</li>
+            <li onclick="window.location.href='blogs.html'"><i class="fas fa-cogs"></i> Stories</li>
+            <li onclick="window.location.href='about.html'"><i class="fas fa-briefcase"></i> About</li>
+            <li onclick="window.location.href='contact.html'"><i class="fas fa-envelope"></i> Contact</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-credit">🌿By <strong>Debdeep</strong></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script
+      src="https://kit.fontawesome.com/1c2e5df7cd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      AOS.init({ duration: 400, once: false });
+
+      VanillaTilt.init(document.querySelector(".imgofuw"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+      });
+
+      VanillaTilt.init(document.querySelector(".leaf"), {
+        max: 25,
+        speed: 200,
+        glare: true,
+        "max-glare": 0.2,
+      });
+
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+      });
+
+      new Glide(".glide", {
+        type: "carousel",
+        perView: 3,
+        focusAt: "center",
+        autoplay: true,
+        animationDuration: 2000,
+        animationTimingFunc: "linear",
+      }).mount();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

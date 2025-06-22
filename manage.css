@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 15px 30px;
+  position: relative;
+  background-color: #15b100;
+  flex-wrap: wrap; 
+}
+
+header .logoimg{
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in;
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: 300;
+  font-size: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+header ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.25s ease-in;
+  cursor: pointer;
+}
+
+header ul li:hover, .logoimg:hover{
+  transform: scale(1.1);
+}
+
+header ul li:active, .logoimg:active{
+  transform: scale(0.9);
+}
+
+
+.manage-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #cbffd7;
+  color: #116d12;
+ 
+}
+
+.manage-section h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.manage-section .tagline {
+  font-size: 24px;
+  color: #0b760e;
+  
+}
+
+.manage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 40px;                                                   
+  max-width: 1200px;                                         
+  margin: auto;
+  padding: 20px;                                              
+}
+
+.manage-card {
+  background-color: #eaffeb;
+  border: 2px solid #15b100;
+  padding: 40px 30px;               
+  height: 180px;                     
+  border-radius: 20px;
+  font-size: 22px;
+  color: #076808;
+  box-shadow: 0 8px 20px rgba(21, 177, 0, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.manage-card:hover {
+  transform: translateY(-6px);
+  background-color: #dfffe3;
+}
+
+*{
+  font-family: 'Fredoka', sans-serif;
+}
+
+@media (max-width: 768px) {
+ header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  header ul {
+    flex-direction: row;
+    gap: 10px;
+    font-size: 18px;
+  }
+}

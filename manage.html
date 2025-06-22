@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Waste Management Stories</title>
+    <link rel="icon" href="eco.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="manage.css" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    >
+  </head>
+  <body>
+    <header>
+      <img
+        class="logoimg"
+        src="eco.svg"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      />
+      <ul >
+        <li onclick="window.location.href='index.html'">Home</li>
+        <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+          Manage
+        </li>
+        <li onclick="window.location.href='blogs.html'">Stories</li>
+        <li onclick="window.location.href='about.html'">About</li>
+        <li onclick="window.location.href='contact.html'">Contact</li>
+      </ul>
+    </header>
+    <section class="manage-section">
+      <h1>
+        Contribute And Help Manage Waste 🌿<br /><span class="tagline"
+          >Your small action makes a big impact.</span
+        >
+      </h1>
+      <div class="manage-grid" >
+        <div class="manage-card" onclick="window.location.href='ruw.html'"data-aos="fade-down-right">
+          Report Unmanaged Waste
+        </div>
+        <div class="manage-card" onclick="window.location.href='wmt.html'"data-aos="fade-down">
+          Waste Management Tracker
+        </div>
+        <div class="manage-card" onclick="window.location.href='rgm.html'"data-aos="fade-down-left">
+          Recycling Goal Manager
+        </div>
+        <div class="manage-card" onclick="window.location.href='ncp.html'"data-aos="fade-up-right">
+          Nearby Collection Points
+        </div>
+        <div class="manage-card" onclick="window.location.href='drri.html'"data-aos="fade-up">
+          DIY Reuse & Recycle Ideas
+        </div>
+        <div class="manage-card" onclick="window.location.href='wsq.html'"data-aos="fade-up-left">
+          Waste Sorting Quiz
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 400, once: false });
+      </script>
+  </body>
+</html>
