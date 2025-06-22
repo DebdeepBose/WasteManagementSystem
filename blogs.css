@@ -74,7 +74,7 @@ header ul li:active,
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: "Pacifico", cursive;
+  font-family: 'Fredoka', sans-serif;
 }
 
 #shareBtn:hover {
@@ -95,7 +95,7 @@ header ul li:active,
   border-radius: 10px;
   border: 2px solid #15b100;
   resize: none;
-  font-family: "Pacifico", cursive;
+  font-family: 'Fredoka', sans-serif;
   box-shadow: 0 4px 15px rgba(21, 177, 0, 0.2);
   transition: box-shadow 0.3s ease;
   outline: none;
@@ -116,7 +116,7 @@ header ul li:active,
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: "Pacifico", cursive;
+  font-family: 'Fredoka', sans-serif;
 }
 
 #submitStory:hover {
@@ -161,7 +161,7 @@ header ul li:active,
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-family: "Pacifico", cursive;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .edit-btn {
